@@ -7,3 +7,4 @@ The purpose of this project is to contain all my IT knowledge I consider worth s
 - Software Development
 	- Clean Code
 		- [Meaningful Names](./software-development/clean-code/meaningful-names.md)
+		- [Functions](./software-development/clean-code/functions.md)
