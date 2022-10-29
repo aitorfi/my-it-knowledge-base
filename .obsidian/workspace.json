@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d7ff1db7929d096f",
+        "id": "e3a4230070bd3836",
         "type": "tabs",
         "children": [
           {
-            "id": "393ccb0467b10d53",
+            "id": "f79a1c59c2445cdd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "software-development/clean-code/functions.md",
+                "file": "software-development/laravel/setting-it-up.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "software-development/clean-code/functions.md",
+                "file": "software-development/laravel/setting-it-up.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "software-development/clean-code/functions.md",
+                "file": "software-development/laravel/setting-it-up.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "software-development/clean-code/functions.md"
+                "file": "software-development/laravel/setting-it-up.md"
               }
             }
           }
@@ -139,7 +139,7 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "393ccb0467b10d53",
+  "active": "f79a1c59c2445cdd",
   "lastOpenFiles": [
     "software-development/clean-code/meaningful-names.md",
     "software-development/clean-code/functions.md",
