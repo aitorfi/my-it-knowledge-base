@@ -34,11 +34,11 @@ It's better to **encode the implementation by adding the suffix -Imp** rather th
 
 > When constructors are overloaded, use static factory methods with names that describe their arguments. For example,
 > 
-> `Complex fulcrumPoint = Complex.FromRealNumber(23.0);`
+> 	`Complex fulcrumPoint = Complex.FromRealNumber(23.0);`
 > 
 > is generally better than
 > 
-> `Complex fulcrumPoint = new Complex(23.0);`
+> 	`Complex fulcrumPoint = new Complex(23.0);`
 > 
 > Consider enforcing their use by making the corresponding constructor private.
 > 
