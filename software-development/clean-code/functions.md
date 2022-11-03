@@ -70,3 +70,71 @@ Related function arguments can be encapsulated in objects to reduce the number o
 > Reducing the number of arguments by creating objects out of them may seem like cheating, but it's not. When groups of variables are passed together, the way x and y are in the example above, they are likely part of a concept that deserves a name of its own.
 > 
 > \- Robert C. Martin, Clean Code (page 43)
+
+
+## Prefer Exceptions to Returning Error Codes
+
+> ...When you return an error code, you create the problem that the caller must deal with the error immediately.
+> 
+> On the other hand, if you use exceptions instead of returned error codes, then the error processing code can be separated from the happy path code and can be simplified:
+> 
+> \- Robert C. Martin, Clean Code (page 46)
+```java
+if (deletePage(page) == E_OK) {
+	if (registry.deleteReference(page.name) == E_OK) {
+		if (configKey.deleteKey(page.name.makeKey()) == E_OK) {
+			logger.log("page deleted");
+		} else {
+			logger.log("configKey not deleted");
+		}
+	} else {
+		logger.log("deleteReference from registry failed");
+	}
+} else {
+	logger.log("delete failed");
+	return E_ERROR;
+}
+```
+```java
+try {
+	deletePage(page);
+	registry.deleteReference(page.name);
+	configKey.deleteKey(page.name.makeKey());
+} catch (Exception e) {
+	logger.log(e.message());
+}
+```
+
+### Extract Try/Catch Blocks
+
+> `Try/Catch` blocks are ugly in their own right. They confuse the structure of the code and mix error processing with normal processing. So it is better to extract the bodies of the `try` and `catch` blocks out into functions of their own.
+> 
+> \- Robert C. Martin, Clean Code (page 46)
+```java
+public void delete(Page page) {
+	try {
+		deletePageAndAllReferences(page);
+	} catch (Exception e) {
+		logError(e);
+	}
+}
+
+private void deletePageAndAllReferences(Page page) throws Exception {
+	deletePage();
+	registry.deleteReference(page.name);
+	configKeys.deleteKey(page.name.makeKey());
+}
+
+private vopid logError(Exception e) {
+	logger.log(e.getMessage());
+}
+```
+### Structured Programming
+
+> Some programmers follow Edsger Dijkstra's rules of structured programming. Dijkstra said that every function, and every block within a function, should have one entry and one exit. Following these rules means that there should only be one `return` statement in a function, no `break` or `continue` statements in a loop, and never, *ever*, any `goto` statements.
+> 
+> While we are sympathetic to the goal and disciplines of structured programming, those rules serve little benefit when functions are very small. It is only in larger functions that such rules provide significant benefit.
+> 
+> So if you keep your functions small, then the occasional multiple `return`, `break`, or `continue` statement does no harm and can sometimes even be more expressive than the single-entry, single-exit rule. On the other hand `goto` only makes sense in large functions, so it should be avoided.
+> 
+> \- Robert C. Martin, Clean Code (page 47)
