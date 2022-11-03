@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "5507005894dc6683",
+        "id": "85448e13be689554",
         "type": "tabs",
         "children": [
           {
-            "id": "144d8b03c41dd2b2",
+            "id": "33f685f7c5a182e3",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -120,17 +120,26 @@
               "type": "outline",
               "state": {}
             }
+          },
+          {
+            "id": "49887aa33deede8b",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 350.5
   },
-  "active": "baaa9a388fb7747f",
+  "active": "33f685f7c5a182e3",
   "lastOpenFiles": [
     "software-development/clean-code/functions.md",
+    "Pasted image 20221103210526.png",
     "software-development/clean-code/meaningful-names.md",
     "software-development/laravel/setting-it-up.md",
     "README.md",
