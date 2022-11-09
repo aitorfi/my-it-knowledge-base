@@ -8,3 +8,7 @@ The purpose of this project is to contain all my IT knowledge I consider worth s
 	- Clean Code
 		- [Meaningful Names](./software-development/clean-code/meaningful-names.md)
 		- [Functions](./software-development/clean-code/functions.md)
+		- [Comments](./software-development/clean-code/comments.md)
+	- Laravel
+		- [Setting It Up](./software-development/laravel/setting-it-up.md)
+		- [Routing](./software-development/laravel/routing.md)
