@@ -1,6 +1,6 @@
 # My IT Knowledge Base
 
-The purpose of this project is to contain all my IT knowledge I consider worth saving in a single repository using Markdown language.
+The purpose of this project is to gather all my IT knowledge I consider worth saving in a single repository using Markdown language. The project is meant to be read from [obsidian](https://obsidian.md/) although it should be compatible with any markdown reader including GitHub.
 
 ## Table of contents
 
