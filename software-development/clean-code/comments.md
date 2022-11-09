@@ -13,18 +13,18 @@
 
 ## Don't Use Comments When You Can Use a Function or a Variable
 
-> Consider the following stretch of code:
-> 
-> 	`// does the module from the global list <mod> depend on the`
-> 	`// subsystem we are part of?`
-> 	`if (smodule.getDependSubsystems().contains(subSysMod.getSubSystem()))`
-> 
-> This could be rephrased without the comments as
-> 
-> 	`ArrayList moduleDependees = smodule.getDependSubsystems();`
-> 	`String ourSubSystem = subSysMod.getSubSystem();`
-> 	`if (moduleDependees.contains(ourSubSystem))`
-> 
+Consider the following stretch of code:
+```java
+// does the module from the global list <mod> depend on the
+// subsystem we are part of?
+if (smodule.getDependSubsystems().contains(subSysMod.getSubSystem()))
+```
+This could be rephrased without the comments as
+```java
+ArrayList moduleDependees = smodule.getDependSubsystems();
+String ourSubSystem = subSysMod.getSubSystem();
+if (moduleDependees.contains(ourSubSystem))
+```
 > \- Robert C. Martin, Clean Code (page 67)
 
 
@@ -43,14 +43,14 @@ Example of redundant javadoc due to mandatory comments:
  * @param tracks The number of tracks on the CD
  * @param durationInMinutes The duration of the CD in minutes
  */
-public void addCD(String title, String author,
-					  int tracks, int durationInMinutes) {
-	 CD cd = new CD();
-	 cd.title = title;
-	 cd.author = author;
-	 cd.tracks = tracks;
-	 cd.duration = duration;
-	 cdList.add(cd);
+public void addCD(String title, String author, 
+				  int tracks, int durationInMinutes) {
+    CD cd = new CD();
+    cd.title = title;
+    cd.author = author;
+    cd.tracks = tracks;
+    cd.duration = duration;
+    cdList.add(cd);
  }
 ```
 
@@ -78,7 +78,7 @@ private int dayOfMonth;
  * @return the day of the month.
  */
 public int getDayOfMonth() {
-	return dayOfMonth;
+    return dayOfMonth;
 }
 ```
 
