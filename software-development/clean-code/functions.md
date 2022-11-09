@@ -8,7 +8,7 @@
 > 
 > This also implies that function should not be large enough to hold nested structures. Therefore, the indent level of a function should not be greater than one or two. This, of course, makes the functions easier to read and understand.
 > 
-> \- Robert C. Martin, Clean Code (pages 35)
+> \- Robert C. Martin, Clean Code (page 35)
 
 
 ## One Level of Abstraction per Function
@@ -17,7 +17,7 @@
 > ...
 > Mixing levels of abstraction within a function is always confusing. Readers may not be able to tell whether a particular expression is an essential concept or a detail.
 > 
-> \- Robert C. Martin, Clean Code (pages 36)
+> \- Robert C. Martin, Clean Code (page 36)
 
 
 ## Use Descriptive Names
