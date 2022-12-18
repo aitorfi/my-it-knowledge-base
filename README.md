@@ -12,3 +12,4 @@ The purpose of this project is to gather all my IT knowledge I consider worth sa
 	- Laravel
 		- [Setting It Up](./software-development/laravel/setting-it-up.md)
 		- [Routing](./software-development/laravel/routing.md)
+		- [File Storage](./software-development/laravel/file-storage.md)
